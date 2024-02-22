@@ -22,6 +22,7 @@ dependencies:
   json_annotation: ^4.8.1
   envied: ^0.5.3
   easy_localization: ^3.0.3
+  google_fonts: ^6.1.0
 
   # dependency_overrite:
 
