@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:common/common.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_architecture/feature/home/view/mixin/home_view_mixin.dart';
@@ -6,6 +7,7 @@ import 'package:flutter_architecture/product/init/language/locale_keys.g.dart';
 import 'package:flutter_architecture/product/init/product_localization.dart';
 import 'package:flutter_architecture/product/navigation/app_router.dart';
 import 'package:flutter_architecture/product/utility/constants/enums/locales.dart';
+import 'package:flutter_architecture/product/widget/project_network_image.dart';
 
 part 'widget/home_appbar.dart';
 
@@ -57,6 +59,12 @@ class _HomeViewState extends State<HomeView> with HomeViewMixin {
               args: ['Arg value'],
             ),
           ),
+
+          const CustomNetworkImage(
+            imageUrl: 'https://picsum.photos/200/300',
+            memCache: CustomMemCache(height: 300, width: 300),
+          ),
+          const ProjectNetworkImage(url: 'https://picsum.photos/200/300'),
         ],
       ),
     );

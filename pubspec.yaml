@@ -14,14 +14,18 @@ dependencies:
   cupertino_icons: ^1.0.2
   easy_localization: ^3.0.3
   equatable: ^2.0.5
+  google_fonts: ^6.1.0
+  flutter_riverpod: ^2.4.10
+  kartal: ^3.5.0
+
   flutter:
     sdk: flutter
-  flutter_riverpod: ^2.4.10
 
   gen:
     path: module/gen
-  google_fonts: ^6.1.0
-  kartal: ^3.5.0
+
+  common:
+    path: module/common
 
   widgets:
     path: module/widgets
