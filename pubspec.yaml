@@ -29,6 +29,7 @@ dependencies:
 
   widgets:
     path: module/widgets
+    
 dev_dependencies:
   build_runner: ^2.4.8
   flutter_launcher_icons: ^0.13.1

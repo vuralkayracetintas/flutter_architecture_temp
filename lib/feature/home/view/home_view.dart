@@ -8,11 +8,15 @@ import 'package:flutter_architecture/product/init/product_localization.dart';
 import 'package:flutter_architecture/product/navigation/app_router.dart';
 import 'package:flutter_architecture/product/utility/constants/enums/locales.dart';
 import 'package:flutter_architecture/product/widget/project_network_image.dart';
+import 'package:widgets/widgets.dart';
 
 part 'widget/home_appbar.dart';
 
 @RoutePage()
+
+/// [Home View] stateful widget
 class HomeView extends StatefulWidget {
+  ///
   const HomeView({super.key});
 
   @override
@@ -24,6 +28,12 @@ class _HomeViewState extends State<HomeView> with HomeViewMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const _HomeAppBar(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // 'Karamursel'.ext.launchMaps();
+          SuccessDialog.show(context, 'Show Dialog Title');
+        },
+      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -38,6 +48,11 @@ class _HomeViewState extends State<HomeView> with HomeViewMixin {
           // ),
           // const Text('Change Language'),
 
+          const AdaptAllView(
+            phone: Text('phone'),
+            tablet: Text('tablet'),
+            desktop: Text('desktop'),
+          ),
           ElevatedButton(
             onPressed: () async {
               final response =
