@@ -7,6 +7,8 @@ import 'package:flutter_architecture/product/init/language/locale_keys.g.dart';
 import 'package:flutter_architecture/product/init/product_localization.dart';
 import 'package:flutter_architecture/product/navigation/app_router.dart';
 import 'package:flutter_architecture/product/utility/constants/enums/locales.dart';
+import 'package:flutter_architecture/product/widget/button/bold_text_button.dart';
+import 'package:flutter_architecture/product/widget/button/dialog_normal_button.dart';
 import 'package:flutter_architecture/product/widget/project_network_image.dart';
 import 'package:widgets/widgets.dart';
 
@@ -47,7 +49,13 @@ class _HomeViewState extends State<HomeView> with HomeViewMixin {
           //   child: Assets.lottie.animZombie.lottie(package: 'gen'),
           // ),
           // const Text('Change Language'),
-
+          const DialogNormalButton(
+            onComplete: print,
+          ),
+          BoldTextButton(
+            onPressed: () {},
+            child: const Text('data'),
+          ),
           const AdaptAllView(
             phone: Text('phone'),
             tablet: Text('tablet'),
